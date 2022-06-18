@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book world</title>
+    <link rel="stylesheet" href="Student login.css">
+    
+    
+</head>
+<body>
+    <div class="full-page">
+        <div class="navbar">
+         
+            <div>
+                <a href='index.html'><h1>Book World</h1></a>
+ 
+            
+            </div>
+           
+            <nav>
+                <ul id='MenuItems'>
+                   <li><a href="index.html">Home</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Student Login</button></li>
+
+                </ul>
+            
+            </nav>
+        </div>
+       
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                    <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+                </div>
+                <form id='login' class='input-group-login'>
+                    <input type='email'class='input-field'  placeholder='Email Id' required >
+		    <input type='password'class='input-field' pattern="[A-Z,0-9,a-z]{8,16}" title="Enter valid password" placeholder='Enter Password' required>
+		    <input type='checkbox'class='check-box'><span>Remember Password</span>
+     <a href="books.html"><button type='submit'class='submit-btn'>Log in</button> </a> 
+        </form>
+		 <form id='register' class='input-group-register'>
+		     <input type='text'class='input-field' pattern="[A-Z,a-z]{4,16}" title="First name should contain 4-16 characters only" placeholder='First Name' required>
+		     <input type='text'class='input-field' pattern="[A-Z,a-z]{1,16}" title="Last name should contain 1-16 characters only" placeholder='Last Name ' required>
+		     <input type='email'class='input-field'placeholder='Email Id' required>
+		     <input type='password'class='input-field' pattern="[A-Z,0-9,a-z]{8,16}" title="Password must contain 1 uppercase, 1 lowercase, numbers & 8-16 characters" placeholder='Enter Password' required>
+		     <input type='password'class='input-field' pattern="[A-Z,0-9,a-z]{8,16}" title="Must be same as password field" placeholder='Confirm Password'  required>
+             <label for="" class="input-field1"> Gender: </label><br>
+             <label for="" class="input-field"> Male <input type="radio" name="Gender" id="gender1"> </label>
+             <label for="" class="input-field"> Female <input type="radio" name="Gender" id="gender2"></label>
+             <label for="" class="input-field"> Others <input type="radio" name="Gender" id="gender2"></label><br>
+             <input type='checkbox'class='check-box' required><span>I agree to the terms and conditions</span>
+                    <button type='submit'class='submit-btn'>Register</button>
+	         </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register()
+		{
+			x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+	</script>
+	<script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
