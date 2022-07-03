@@ -9,19 +9,20 @@
 <form style="text-align: center" name="ShoppingList">
     <fieldset id="fieldset">
         <legend style="font-size: 30px;text-align: center">Shopping cart</legend> <br></style>
-        <label>Item:  <input type="text" name="name" required></label><br> <br> <br>
-        <label>Quantity: <input type="number" name="data" required></label><br> <br> <br>
+        <label for="Item">Item:</label>  <input type="text" name="Item" required><br> <br> <br>
+        <label for="Quantity">Quantity:</label><input type="number" name="Quantity" required><br> <br> 
        
 
-        <button type="button" id="save" cellpadding="40px" value="Save"   onclick="SaveItem()"> Save</button>
-        <button type="button" id="delete" cellpadding="40px" value="Delete" onclick="RemoveItem()">delete</button>
+        <button type="button" id="save" value="Save" name="save"  onclick="SaveItem()"> Save</button>
+       <!-- <button type="button" id="delete"  value="Delete" onclick="RemoveItem()">delete</button>-->
+       <br> <br>
     </fieldset>
     <center>
     <div id="items_table">
         <h2>Shopping List</h2>
         <table id="list"></table>
         
-       <input type="button" id="clear" value="Clear" onclick="ClearAll()"> <br>
+       <button type="button" id="clear" value="Clear" onclick="ClearAll()"> clear</button> <br>
 
     </div>
 </center>

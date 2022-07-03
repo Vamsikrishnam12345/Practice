@@ -37,12 +37,18 @@ function doShowAll() {
 }
 function SaveItem() {
 
-    var name = document.forms.ShoppingList.name.value;
-    var data = document.forms.ShoppingList.data.value;
-    localStorage.setItem(name, data);
-    doShowAll();
-
-}
+    var name = document.forms.ShoppingList.Item.value;
+    var data = document.forms.ShoppingList.Quantity.value;
+   
+  
+        localStorage.setItem(name, data);
+        doShowAll();
+        alert("The items are added to cart...!")
+        
+        
+       }
+    
+    
 //Change an existing key-value in HTML5 storage.
 function ModifyItem() {
     var name1 = document.forms.ShoppingList.name.value;
@@ -61,11 +67,14 @@ function ModifyItem() {
 }
 function RemoveItem()
 {
-var name=document.forms.ShoppingList.name.value;
-document.forms.ShoppingList.data.value=localStorage.removeItem(name);
+var name=document.forms.ShoppingList.Item.value;
+document.forms.ShoppingList.Quantity.value=localStorage.removeItem(name);
 doShowAll();
+alert("The items in the cart are removed...!")
 }
 function ClearAll() {
     localStorage.clear();
+   
     doShowAll();
+    alert("The items in the cart are cleared...!")
 }
